@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+   - name: Create multiple directories
+     file:
+       path: "{{item}}"
+       state: directory
+     with_items:
+       - /home/diegosoda/vn1
+       - /home/diegosoda/vn2
+       - /home/diegosoda/vn3      

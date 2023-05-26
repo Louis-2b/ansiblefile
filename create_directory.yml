@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+   - name: Create directory
+     file:
+       path: /home/diegosoda/test
+       state: directory
+       owner: diegosoda
+       group: diegosoda
+       mode: 775     
