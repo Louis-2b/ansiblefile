@@ -6,4 +6,4 @@
      archive:
        path: /home/diegosoda/tomcat
        dest: /home/diegosoda/tomcat.tar.gz
-       remove: yes
+       state: absent
