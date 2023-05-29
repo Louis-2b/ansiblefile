@@ -2,8 +2,9 @@
 - hosts: all
   become: true
   tasks:
-   - name: Compress Directory contents
+   - name: Compress Directory and remove
      archive:
        path: /home/diegosoda/tomcat
        dest: /home/diegosoda/tomcat.tar.gz
-       state: absent
+       remove: true
+       force_archive: true
