@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: Verifier la date avec la commande shell
+    shell:
+      "date"
+    register: datecmd
+    tags: datecmd
+
+  - debug: msg="{{datecmd.stdout}}"  
